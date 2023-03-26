@@ -7,14 +7,22 @@
             <!-- <a href="index.html" class="font-medium hover:bg-slate-400 border b ">Edit</a>
         </div> -->
             <button href="index.html"
-                class=" hover:bg-[#045a1d]  py-1 px-6 rounded-2xl text-white bg-[#3F497F] font-poppins font-bold text-sm my-2 ">
+                class=" hover:bg-[#045a1d]  py-1 px-6 rounded-2xl text-white bg-[#3F497F] font-poppins font-bold text-sm my-2 " @click="redirect()">
                 Back to Registration
             </button>
         </div>
     </section>
 </template>
   
-<script></script>
+<script>
+export default {
+    methods : {
+        redirect() {
+            this.$router.push({ name: 'home' })
+        }
+    }
+}
+</script>
   
 <style scoped>
 .read-the-docs {

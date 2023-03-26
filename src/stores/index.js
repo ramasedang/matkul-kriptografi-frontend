@@ -5,4 +5,7 @@ export const useStore = defineStore({
     state: () => ({
         count: 0,
     }),
+    actions: {
+        
+    }
 })
