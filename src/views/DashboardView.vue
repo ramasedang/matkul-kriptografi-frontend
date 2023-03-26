@@ -6,9 +6,8 @@
         Participant
       </h1>
     </div>
-    <div>
-      <table class="table-fixed w-full text-sm p-6 flex flex-col items-center ">
-        <!-- https://flowbite.com/docs/components/tables/ -->
+    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+      <table class="table-fixed text-sm items-center">
         <tr>
           <th>No</th>
           <th>Nama</th>
@@ -21,8 +20,8 @@
           <th>Hapus</th>
         </tr>
 
-        <tr class="border-b" v-for="(user, index) in peserta" :key="index">
-          <td class="px-8">{{ user.id }}</td>
+        <tr class="border-b " v-for="(user, index) in peserta" :key="index">
+          <td>{{ user.id }}</td>
           <td>{{ user.nama }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.asal_institut }}</td>
