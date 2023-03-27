@@ -1,12 +1,13 @@
 <template>
   <h3>{{ peserta }}</h3>
-  <section class="flex flex-col items-center justify-center bg-[#E8DFCA]">
-    <div class="p-3 bg-[#3F497F] rounded-sm">
+  <div class=" bg-[#E8DFCA] h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 " >
+    <div class=" bg-[#3F497F] rounded-sm p-3 ">
       <h1
         class="rounded-lg my-1 mx-10 text-center text-white bg-[#539165] font-Georgia font-bold text-lg"
       >
         Register Home
       </h1>
+      <div>
       <form class="mx-5">
         <div>
           <label for="nama">Nama</label>
@@ -47,8 +48,8 @@
           <label for="jenis_lomba">Jenis Lomba</label>
         </div>
         <div>
-          <select id="jenis_lomba" name="jenis_lomba" v-model="peserta.jenis_lomba">
-            <option value="x">--Pilih Jenis Lomba--</option>
+          <select id="jenis_lomba" name="jenis_lomba" v-model="peserta.jenis_lomba" >
+            <option value="" disabled selected hidden>---Pilih Jenis Lomba---</option>
             <option value="CTFS">CTF</option>
             <option value="KTI">KTI</option>
             <option value="ESSAY">ESSAY</option>
@@ -73,7 +74,8 @@
         </div>
       </form>
     </div>
-  </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -162,7 +164,7 @@ button {
 
 input,
 select {
-  width: 18rem;
+  width: 20rem;
   border: 2px solid #f7c04a;
   background-color: #f8f5e4;
   color: #00021f;
@@ -176,7 +178,15 @@ label {
   font-size: small;
 }
 
-section {
-  height: 100vh;
+.h-screen{
+  width: 100%;
+  height: auto;
 }
+
+.m-auto {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
 </style>
