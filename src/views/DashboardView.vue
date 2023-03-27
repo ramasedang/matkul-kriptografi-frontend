@@ -1,5 +1,4 @@
 <template>
-  <h3>{{ peserta }}</h3>
   <section class="bg-[#E8DFCA] h-screen ">
     <div class="pt-10">
       <h1 class="text-3xl text-center font-poppins font-bold">
@@ -53,7 +52,7 @@ export default {
     return {
       length: 0,
       privatekeyBase64: import.meta.env.VITE_PRIVKEY,
-      peserta: [{ "id": 1, "nama": "test", "email": "test", "asal_institut": "test", "no_hp": "089523804019", "alamat": "test", "jenis_lomba": "test", "link_pembayaran": "https://chat.openai.com/chat" }, { "id": 2, "nama": "moh sulthan arier rahmatullah", "email": "ramasedang@gmail.com", "asal_institut": "its", "no_hp": "082136178936389", "alamat": "Pamekasan", "jenis_lomba": "KTI", "link_pembayaran": "https://github.com/ramasedang/matkul-kriptografi-frontend" }, { "id": 3, "nama": "Andyana", "email": "andyas@gmail.com", "asal_institut": "Unair", "no_hp": "1231413332", "alamat": "Blittar", "jenis_lomba": "ESSAY", "link_pembayaran": "https://github.com/ramasedang/matkul-kriptografi-frontend" }]
+      peserta: []
     };
   },
   methods: {
@@ -68,7 +67,7 @@ export default {
         let decrypted = BigInt(blocks[i]) ** BigInt(d) % BigInt(n);
         plaintext += String.fromCharCode(parseInt(decrypted.toString()));
       }
-      // simpan hasil dekripsi ke cache
+      
 
       return plaintext;
     },
@@ -103,7 +102,7 @@ export default {
 
   },
   created() {
-    // this.getPeserta();
+    this.getPeserta();
   }
 }
 </script>

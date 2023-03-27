@@ -1,5 +1,4 @@
 <template>
-  <h3>{{ peserta }}</h3>
   <section class="flex flex-col items-center justify-center bg-[#E8DFCA]">
     <div class="p-3 bg-[#3F497F] rounded-sm">
       <h1
@@ -48,7 +47,7 @@
         </div>
         <div>
           <select id="jenis_lomba" name="jenis_lomba" v-model="peserta.jenis_lomba">
-            <option value="x">--Pilih Jenis Lomba--</option>
+            <option value="" disabled selected hidden>---Pilih Jenis Lomba---</option>
             <option value="CTFS">CTF</option>
             <option value="KTI">KTI</option>
             <option value="ESSAY">ESSAY</option>
